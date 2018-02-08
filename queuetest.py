@@ -1,3 +1,12 @@
+"""
+first use of queue
+explains some concepts about deamon
+set deamon = False if you want to keep the thread running after the main thread has ended.
+i.e. you want the job to complete regardless of how long it takes after the program has
+finished executing
+"""
+
+
 from queue import Queue
 import time
 import threading
@@ -35,5 +44,6 @@ def main():
     # if g.deamon = True, we need to put in this time.sleep(5) statement to keep the main() thread
     # running while the g and t threads run.
     # without the sleep, the threads dont have time to run before the main thread stops
+
 main()
 

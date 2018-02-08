@@ -24,9 +24,18 @@ def data_puller_worker():
 def data_plotter():
     data_received = []
     while True:
+        
         a = queue.get()
+        # queue.get retrieves the most recent item in the queue
+        # "remove and return an item from the queue"
+        print("queue size")
+        print(queue.qsize())
+        # one item is added to queue, and get() is performed immediately, so qsize is always zero.
+        # if a sleep statement is put in, which is greater than sleep in the data_puller_worker
+        # sleep, then the qsize will increase
+        time.sleep(2)
         data_received.append(a)
-        print(data_received)
+        print(a)
 
         
 def main():

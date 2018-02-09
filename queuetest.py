@@ -4,6 +4,8 @@ explains some concepts about deamon
 set deamon = False if you want to keep the thread running after the main thread has ended.
 i.e. you want the job to complete regardless of how long it takes after the program has
 finished executing
+A queue stores multiple pieces of info. But only the oldest piece of info can be obtained from
+the list. This is done by queue.get()
 """
 
 

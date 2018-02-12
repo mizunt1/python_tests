@@ -1,3 +1,25 @@
+"""
+steps to inplement a q thread.
+if the thread is going to result in outputting information that will be printed on
+the gui, connect the signal made in the q thread to a function which prints that signal on the
+gui.
+connect the qthread to the desired function
+qthread.connect(self.updategui)
+
+ This function must have the decorator @pyqtSlot so that it can recieve the emitted signal.
+create the function to write on the gui
+create an instance of the qthread class and start it
+qthread.start()
+
+create a separete class for the thread
+make some signals
+pyqtSignal()
+write a function which returns the actual outputted value every time the function is called
+write a second function which calls the above function ^ in a loop.
+this second function will include the emit signals
+"""
+
+
 import sys
 import time
 import numpy as np
